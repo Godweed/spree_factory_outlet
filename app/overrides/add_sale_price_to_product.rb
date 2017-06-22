@@ -18,7 +18,9 @@ Deface::Override.new(virtual_path: 'spree/shared/_products',
               <div class="panel-footer text-center">
                 <% if product.sale_price.present? %>
                   <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                    <span class="price selling small text-muted" itemprop="price"><%= Spree.t(:original_price) %>:&nbsp;<s><%= display_price(product,false) %></s></span>
+                    <span class="price selling small text-muted" itemprop="price">
+                      <%= Spree.t(:original_price) %>:&nbsp;<s><%= display_price(product,false) %></s>
+                    </span>
                   </span>
                 <% end %>
                   <br />

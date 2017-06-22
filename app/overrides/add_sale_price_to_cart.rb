@@ -12,6 +12,7 @@ Deface::Override.new(virtual_path: 'spree/products/_cart_form',
             <% if @product.sale_price.present? %>
               <span class="text-muted price selling" itemprop="price">
                 <%= Spree.t(:original_price) %>:&nbsp;<s><%= display_price(@product,false) %></s>
+                <%= display_sale_link(@product) %>
               </span>
               <br />
             <% end %>
